@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/** Using Comparator to sort the items accoring to their price */
+/** Using Comparator to compare the items accoring to their price */
 class MyItemCompServiceImpl implements Comparator<ItemDTO>{
     
     // This method compares the items based on their prices.
@@ -61,12 +61,13 @@ class ItemDTO{
    }
 }
 
-/*************** To test the code starts: Unit Test **********************/
 public class SortServiceImpl {
 
     public static void main(String a[]){
         
         List<ItemDTO> itemList = new ArrayList<ItemDTO>();
+        //these data comes from webservices in enterprise applications from DAOImpl layer.
+        // using sample data for test.
         itemList.add(new ItemDTO("T-shirt",300));
         itemList.add(new ItemDTO("Formal-shirt",600));
         itemList.add(new ItemDTO("Trouser",700));
@@ -81,4 +82,3 @@ public class SortServiceImpl {
         
     }
 }
-/*************** To test the code ends **********************/
